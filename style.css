@@ -1,0 +1,90 @@
+/* style.css - single stylesheet for all pages */
+
+:root{
+  --brand:#004466;
+  --accent:#006699;
+  --muted:#f4f7f9;
+  --text:#222;
+  --max-width:1000px;
+}
+
+*{box-sizing:border-box}
+
+body{
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  margin:0;
+  color:var(--text);
+  background:var(--muted);
+  display:flex;
+  justify-content:center;
+}
+
+.container{
+  width:100%;
+  max-width:var(--max-width);
+  background:white;
+  min-height:100vh;
+  display:grid;
+  grid-template-rows:auto 1fr auto;
+  box-shadow:0 6px 18px rgba(0,0,0,0.06);
+}
+
+/* Header and nav use flexbox for a horizontal menu */
+header{
+  background:var(--brand);
+  color:white;
+  padding:1rem 1.25rem;
+}
+
+header .top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+}
+
+h1{font-size:1.25rem; margin:0}
+nav ul{list-style:none; padding:0; margin:0; display:flex; gap:0.5rem;}
+nav a{
+  color:white; text-decoration:none; padding:6px 10px; display:inline-block; border-radius:4px;
+}
+nav a:hover{background:var(--accent)}
+
+/* Main content area uses CSS grid to create a content column and optional aside */
+main{
+  padding:1.25rem;
+  display:grid;
+  grid-template-columns: 1fr 300px;
+  gap:1.25rem;
+}
+
+/* For smaller screens stack columns */
+@media (max-width:900px){
+  main{grid-template-columns:1fr}
+  nav ul{flex-wrap:wrap}
+}
+
+/* Article and aside styling */
+article{background:whitesmoke; padding:1rem; border-radius:8px}
+aside{background:#fff; padding:1rem; border-radius:8px; border:1px solid #eee}
+
+/* Footer */
+footer{
+  background:#efefef; padding:0.75rem 1.25rem; text-align:center; font-size:0.9rem;
+  border-top:1px solid #e2e2e2;
+}
+
+/* Utility elements required by the assignment */
+.table-compare{width:100%; border-collapse:collapse;}
+.table-compare th, .table-compare td{border:1px solid #ddd; padding:8px; text-align:left;}
+.table-compare th{background:var(--brand); color:white}
+
+/* Links in content */
+a.external{color:var(--brand)}
+
+/* Hover effect demonstration for content links */
+a.content-link{color:var(--brand); text-decoration:none; border-bottom:2px solid transparent; padding-bottom:2px}
+a.content-link:hover{border-bottom-color:var(--accent)}
+
+/* Simple image handling */
+img.responsive{max-width:100%; height:auto; display:block; margin:0 auto;}
