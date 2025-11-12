@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Web Browsers Quiz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="top">
+        <h1>Self-Assessment Quiz</h1>
+        <nav>
+          <ul class="nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="modern.html">Modern Browsers</a></li>
+            <li><a href="concepts.html">Key Concepts</a></li>
+            <li><a href="references.html">References</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="quiz-container">
+        <h2>Test Your Knowledge</h2>
+        <form id="quizForm">
+          <div class="question">
+            <p><strong>1.</strong> Fill in the blank: The first web browser ever created was called ________.</p>
+            <input type="text" name="q1" placeholder="Enter answer">
+          </div>
+
+          <div class="question">
+            <p><strong>2.</strong> Which browser introduced graphical rendering for images and text?</p>
+            <label><input type="radio" name="q2" value="Nexus"> Nexus</label>
+            <label><input type="radio" name="q2" value="Mosaic"> Mosaic</label>
+            <label><input type="radio" name="q2" value="Safari"> Safari</label>
+          </div>
+
+          <div class="question">
+            <p><strong>3.</strong> Which company developed the Firefox browser?</p>
+            <label><input type="radio" name="q3" value="Mozilla"> Mozilla</label>
+            <label><input type="radio" name="q3" value="Microsoft"> Microsoft</label>
+            <label><input type="radio" name="q3" value="Apple"> Apple</label>
+          </div>
+
+          <div class="question">
+            <p><strong>4.</strong> Which browser replaced Internet Explorer?</p>
+            <label><input type="radio" name="q4" value="Chrome"> Google Chrome</label>
+            <label><input type="radio" name="q4" value="Opera"> Opera</label>
+            <label><input type="radio" name="q4" value="Edge"> Microsoft Edge</label>
+          </div>
+
+          <div class="question">
+            <p><strong>5.</strong> Multiple answers: Select the newest innovations found in modern browsers:</p>
+            <label><input type="checkbox" name="q5" value="AI"> AI Integration</label>
+            <label><input type="checkbox" name="q5" value="Privacy"> Privacy Controls</label>
+            <label><input type="checkbox" name="q5" value="TextOnly"> Text-only browsing</label>
+            <label><input type="checkbox" name="q5" value="PWA"> Progressive Web Apps</label>
+          </div>
+
+          <button type="submit">Submit</button>
+          <button type="button" id="resetBtn">Reset</button>
+        </form>
+        <div id="result" class="result"></div>
+      </div>
+    </main>
+
+    <footer>
+      <p>IT 3203 Class Project | <a href="https://ksuweb.github.io/IT3203/">Course Website</a></p>
+    </footer>
+  </div>
+</body>
+</html>
