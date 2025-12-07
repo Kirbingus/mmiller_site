@@ -1,3 +1,13 @@
+// Mobile Menu
+document.addEventListener("DOMContentLoaded", () => {
+  const burger = document.getElementById("hamburger");
+  const navMenu = document.getElementById("navList");
+
+  burger.addEventListener("click", () => {
+    navMenu.classList.toggle("mobile-show");
+  });
+});
+
 // quiz logic
 document.addEventListener("DOMContentLoaded", () => {
   const quiz = document.getElementById("quizForm");

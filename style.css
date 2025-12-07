@@ -3,6 +3,8 @@
 :root{
   --brand:#004466;
   --accent:#006699;
+  --success: #2e8b57;
+  --error: #b22222;
   --muted:#f4f7f9;
   --text:#222;
   --max-width:1000px;
@@ -44,10 +46,22 @@ header .top{
 }
 
 h1{font-size:1.25rem; margin:0}
-nav ul{list-style:none; padding:0; margin:0; display:flex; gap:0.5rem;}
-nav a{
-  color:white; text-decoration:none; padding:6px 10px; display:inline-block; border-radius:4px;
+nav ul{
+	list-style:none; 
+	padding:0; 
+	margin:0; 
+	display:flex; 
+	gap:0.5rem;
 }
+	
+nav a{
+  color:white; 
+  text-decoration:none; 
+  padding:6px 10px; 
+  display:inline-block; 
+  border-radius:4px;
+}
+
 nav a:hover{background:var(--accent)}
 
 /* Main content area uses CSS grid to create a content column and optional aside */
@@ -65,12 +79,25 @@ main{
 }
 
 /* Article and aside styling */
-article{background:whitesmoke; padding:1rem; border-radius:8px}
-aside{background:#fff; padding:1rem; border-radius:8px; border:1px solid #eee}
+article{
+	background:whitesmoke; 
+	padding:1rem; 
+	border-radius:8px
+}
+
+aside{
+	background:#fff; 
+	padding:1rem; 
+	border-radius:8px; 
+	border:1px solid #eee
+}
 
 /* Footer */
 footer{
-  background:#efefef; padding:0.75rem 1.25rem; text-align:center; font-size:0.9rem;
+  background:#efefef; 
+  padding:0.75rem 1.25rem; 
+  text-align:center; 
+  font-size:0.9rem;
   border-top:1px solid #e2e2e2;
 }
 
@@ -88,3 +115,89 @@ a.content-link:hover{border-bottom-color:var(--accent)}
 
 /* Simple image handling */
 img.responsive{max-width:100%; height:auto; display:block; margin:0 auto;}
+
+/* Quiz styles */
+.quiz-container {
+  background: whitesmoke;
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 900px;
+}
+.question {
+  margin-bottom: 1rem;
+  padding-bottom: .75rem;
+  border-bottom: 1px solid #fff;
+}
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+label { display: block; margin: 6px 0; }
+button {
+  background: var(--brand);
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 8px;
+}
+button:hover { background: var(--accent); }
+
+/* Feedback */
+.correct { color: var(--success); font-weight: 600; }
+.incorrect { color: var(--error); font-weight: 600; }
+.score-pass { color: var(--success); font-weight: 700; }
+.score-fail { color: var(--error); font-weight: 700; }
+.result { margin-top: 1rem; padding: .75rem; border-radius: 8px; background: #fff; }
+
+/* Mobile menu */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  padding: 8px;
+}
+
+/* Mobile menu hidden initially */
+nav ul.mobile-hidden {
+  display: none;
+  flex-direction: column;
+  background: var(--brand);
+  width: 100%;
+  padding: 1rem 0;
+}
+
+/* Tablet breakpoint */
+@media (max-width: 900px) {
+  .top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Mobile breakpoint */
+@media (max-width: 600px) {
+  .hamburger {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  nav ul.mobile-show {
+    display: flex;
+  }
+
+  table, th, td {
+    font-size: 14px;
+  }
+
+  main {
+    padding: 0.75rem;
+  }
+}
